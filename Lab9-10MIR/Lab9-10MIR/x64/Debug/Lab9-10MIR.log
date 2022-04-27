@@ -1,0 +1,5 @@
+﻿  UI.cpp
+C:\Users\seNNNz0rel\Documents\Lab Sem II\Lab9-10MIR\Lab9-10MIR\Service.h(6,24): warning C4584: 'Service': base-class 'Produs' is already a base-class of 'Tonomat'
+C:\Users\seNNNz0rel\Documents\Lab Sem II\Lab9-10MIR\Lab9-10MIR\Produs.h(6): message : see declaration of 'Produs'
+C:\Users\seNNNz0rel\Documents\Lab Sem II\Lab9-10MIR\Lab9-10MIR\Tonomat.h(28): message : see declaration of 'Tonomat'
+  Lab9-10MIR.vcxproj -> C:\Users\seNNNz0rel\Documents\Lab Sem II\Lab9-10MIR\x64\Debug\Lab9-10MIR.exe
