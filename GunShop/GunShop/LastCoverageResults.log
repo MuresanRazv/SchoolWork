@@ -1,0 +1,21 @@
+[2022-04-27 17:42:53] [info] Start Program:
+Path:"C:\Users\seNNNz0rel\Documents\Lab Sem II\GunShop\x64\Debug\GunShop.exe"
+Arguments:
+Working directory: "C:\Users\seNNNz0rel\Documents\Lab Sem II\GunShop\GunShop\"
+Modules: Selected: C:\Users\seNNNz0rel\Documents\Lab Sem II\GunShop\x64\Debug\GunShop.exe Excluded: 
+Sources: Selected: C:\Users\seNNNz0rel\Documents\Lab Sem II\GunShop\GunShop Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\seNNNz0rel\AppData\Local\Temp\ukawbefa.mnw 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-04-27 17:42:53] [info] Module: C:\Users\seNNNz0rel\Documents\Lab Sem II\GunShop\x64\Debug\GunShop.exe is selected because it matches selected pattern: C:\Users\seNNNz0rel\Documents\Lab Sem II\GunShop\x64\Debug\GunShop.exe
+[2022-04-27 17:42:54] [info] ----------------------------------------------------
+[2022-04-27 17:42:54] [info] Coverage binary generated in file: C:\Users\seNNNz0rel\AppData\Local\Temp\ukawbefa.mnw
+[2022-04-27 17:42:54] [info] ----------------------------------------------------
