@@ -1,3 +1,2 @@
-Rifle,3,3,3,Lever Action
-Shotgun,3,3,3,Lever Action
-Handgun,2,2,2,Semi Automatic
+Revolver,newrev,20,15,Double Action
+Handgun,mam,20,5,Automatic

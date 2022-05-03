@@ -22,10 +22,12 @@ GunStorage GunShop::getStorage()
 void GunShop::addItem(Gun& newGun)
 {
 	storage.addItem(newGun);
+	undoSt.push(newGun);
 }
 
 void GunShop::removeItem(int ind)
 {
+	undoSt.push(*this->storage.getAll()[ind]);
 	storage.removeItem(ind);
 }
 
@@ -42,4 +44,26 @@ bool GunShop::loadCsv(string csvPath)
 bool GunShop::saveCsv(string csvPath)
 {
 	return storage.saveCsv(csvPath);
+}
+
+bool GunShop::undo()
+{
+	if (undoSt.empty())
+		return false;
+	else {
+		redoSt.push(undoSt.top());
+		undoSt.pop();
+	}
+	return true;
+}
+
+bool GunShop::redo()
+{
+	if (redoSt.empty())
+		return false;
+	else {
+		undoSt.push(redoSt.top());
+		redoSt.pop();
+	}
+	return true;
 }

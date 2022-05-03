@@ -8,6 +8,7 @@ Gun::Gun()
 	name = "None";
 }
 
+
 unsigned int Gun::getBulletCapacity()
 {
 	return bulletCapacity;

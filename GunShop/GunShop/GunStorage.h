@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <stack>
 #include <sstream>
 #include <fstream>
 #include "Gun.h"
@@ -32,8 +33,10 @@ public:
 	void addItem(Gun& newGun);
 	template <typename GunType>
 	void editItem(int ind, Gun* newGun) {
+		guns[ind]->~Gun();
+		guns[ind] = new GunType();
 		GunType* hg = dynamic_cast<GunType*>(guns[ind]), * newHg = dynamic_cast<GunType*>(newGun);
-		if (hg != nullptr && &newHg != nullptr) {
+		if (hg != nullptr && newHg != nullptr) {
 			hg->setFunc(newHg->getFunc());
 			hg->setName(newHg->getName());
 			hg->setWeight(newHg->getWeight());
