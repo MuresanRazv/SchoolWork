@@ -31,6 +31,7 @@ public:
 
 	// Operations
 	void addItem(Gun& newGun);
+	void insertItem(Gun& newGun, int ind);
 	template <typename GunType>
 	void editItem(int ind, Gun* newGun) {
 		guns[ind]->~Gun();

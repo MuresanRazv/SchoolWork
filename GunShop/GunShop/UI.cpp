@@ -420,11 +420,11 @@ bool UI::doOperation(string key)
 	}
 
 	if (key == "U" || key == "u") {
-		this->undo();
+		shop.undo();
 	}
 
-	if (key == "R" || key == "r") {
-		this->redo();
+	if (key == "RE" || key == "re") {
+		shop.redo();
 	}
 
 	if (key == "S" || key == "s") {
@@ -474,7 +474,7 @@ void UI::displayMenu()
 	cout << "|" << setw(30) << "  Modify Gun (M/m)" << "|" << endl;
 	cout << "|" << setw(30) << "  Show all guns (S/s)" << "|" << endl;
 	cout << "|" << setw(30) << "  Undo (U/u)" << "|" << endl;
-	cout << "|" << setw(30) << "  Redo (R/r)" << "|" << endl;
+	cout << "|" << setw(30) << "  Redo (RE/re)" << "|" << endl;
 	cout << "|" << setw(30) << "  Quit (Q/q)" << "|" << endl;
 	cout << setw(32) << setfill('-') << "" << endl;
 	cout.fill(prev);
@@ -494,7 +494,7 @@ void UI::display()
 	cout << setw(20) << "Welcome to my Gun Shop!" << '\n';
 
 	while (running) {
-		displayMenu();
+  			displayMenu();
 	}
 
 	shop.saveCsv("C:/Users/seNNNz0rel/Documents/Lab Sem II/GunShop/GunShop/example.csv");

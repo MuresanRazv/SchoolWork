@@ -8,6 +8,10 @@ Gun::Gun()
 	name = "None";
 }
 
+Gun* Gun::Clone()
+{
+	return nullptr;
+}
 
 unsigned int Gun::getBulletCapacity()
 {

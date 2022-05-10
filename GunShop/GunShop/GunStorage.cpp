@@ -41,6 +41,11 @@ void GunStorage::addItem(Gun& newGun)
 	guns.push_back(&newGun);
 }
 
+void GunStorage::insertItem(Gun& newGun, int ind)
+{
+	guns.insert(guns.begin() + ind, &newGun);
+}
+
 void GunStorage::removeItem(int ind)
 {
 	guns.erase(guns.begin() + ind);

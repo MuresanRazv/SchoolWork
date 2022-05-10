@@ -45,6 +45,9 @@ public:
 	// Constructor 
 	Gun();
 
+	// Virtual copy constructor
+	virtual Gun* Clone();
+
 	// Destructor
 	virtual ~Gun();
 
@@ -71,6 +74,11 @@ public:
 	Handgun();
 	Handgun(unsigned int bulletCapacity, unsigned int weight, string name, hgFunction func);
 
+	// Copy constructor
+	Gun* Clone() {
+		return new Handgun(this->getBulletCapacity(), this->getWeight(), this->getName(), this->func);
+	}
+
 	// Destructor
 	~Handgun();
 
@@ -93,6 +101,11 @@ public:
 	// Constructors
 	Revolver();
 	Revolver(unsigned int bulletCapacity, unsigned int weight, string name, rvFunction func);
+
+	// Copy constructor
+	Gun* Clone() {
+		return new Revolver(this->getBulletCapacity(), this->getWeight(), this->getName(), this->func);
+	}
 
 	// Destructor
 	~Revolver();
@@ -117,6 +130,11 @@ public:
 	Rifle();
 	Rifle(unsigned int bulletCapacity, unsigned int weight, string name, rfFunction func);
 
+	// Copy constructor
+	Gun* Clone() {
+		return new Rifle(this->getBulletCapacity(), this->getWeight(), this->getName(), this->func);
+	}
+
 	// Destructor
 	~Rifle();
 
@@ -139,6 +157,11 @@ public:
 	// Constructors
 	Shotgun();
 	Shotgun(unsigned int bulletCapacity, unsigned int weight, string name, sgFunction func);
+
+	// Copy constructor
+	Gun* Clone() {
+		return new Shotgun(this->getBulletCapacity(), this->getWeight(), this->getName(), this->func);
+	}
 
 	// Destructor
 	~Shotgun();

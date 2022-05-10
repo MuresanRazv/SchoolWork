@@ -4,11 +4,8 @@
 class GunShop : public GunStorage {
 private:
 	GunStorage storage;
-	// TODO: finish implementation of Undo/Redo, besides the objects i'm storing in the stack,
-	// I also have to store the indice and operation that was used so that I can Undo/Redo the
-	// operation properly
-	stack<Gun> undoSt;
-	stack<Gun> redoSt;
+	stack<pair<pair<Gun*, int>, string>> undoSt;
+	stack<pair<pair<Gun*, int>, string>> redoSt;
 
 public:
 	// Constructors
@@ -25,7 +22,9 @@ public:
 	void addItem(Gun& newGun);
 	template <typename GunType>
 	void editItem(int ind, Gun* newGun) {
-		undoSt.push(*storage.getAll()[ind]);
+		pair<pair<Gun*, int>, string> newPair;
+		newPair = make_pair(make_pair(this->storage.getAll()[ind]->Clone(), ind), "e");
+		undoSt.push(newPair);
 		storage.editItem<GunType>(ind, newGun);
 	}
 	void removeItem(int ind);
